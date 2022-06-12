@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+      <title>Search Status Page</title>
+   </head>
+   <body>
+      <div class="box-container">
+         <h1>Search a Status</h1>
+         <form action ="searchstatusprocess.php" method = "GET">
+            <p>
+               <label>Search a Status</label>
+               <input type="text" name="search" required="required" id="searchvalidation" class="searchstatustext" pattern="^[\w,.!?][\s\w,.!?]*$" title="Search input must not be empty">
+            </p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Show Results" name="submit">
+         </form>
+         <br>
+         <a href="http://cqp5107.cmslamp14.aut.ac.nz/assign1/index.html" class="back-button">Back To Homepage</a>
+      </div>
+   </body>
+</html>
+<script>
+   document.getElementById("searchvalidation").addEventListener('keydown', function (j) {
+   if (this.value.length === 0 && j.which === 32)j.preventDefault();
+   });
+</script>
